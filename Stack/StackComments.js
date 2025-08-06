@@ -36,7 +36,7 @@ class Stack {
     //Method to Check if Stack is Empty
     isEmpty() {
         //Return True if Array Length is 0, Otherwise False
-        return this.items.length===0;
+        return this.items.length === 0;
     }
 
     //Method to Return the Number of Elements in the Stack
