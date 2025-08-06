@@ -4,7 +4,7 @@ class Node {
     Connected Anywhere*/
     constructor(value) {
         this.value = value;
-        this.next = null;
+        this.next = null; // Pointer to Next Node
     }
 }
 
