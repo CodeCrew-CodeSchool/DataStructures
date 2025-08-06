@@ -7,21 +7,19 @@ class Node {
 
 class LinkedList {
     constructor() {
-        this.head = null;   
-        this.tail = null;   
+        this.head = null;
+        this.tail = null;
         this.length = 0;
     }
 
-    
     find(value) {
         let current = this.head;
         while (current) {
-            if (current.value === value){
+            if (current.value === value) {
                 return current;
             }
             current = current.next;
         }
-
         return null;
     }
 
@@ -39,7 +37,7 @@ class LinkedList {
 
     prepend(value) {
         const newNode = new Node(value);
-        newNode.next = this.head;       
+        newNode.next = this.head;
         this.head = newNode;
         if (!this.tail) {
             this.tail = newNode;
@@ -48,54 +46,41 @@ class LinkedList {
     }
 
     insert(index, value) {
-        if (index <= 0){ 
-            return this.prepend(value); 
-        } 
-        
-        if (index >= this.length){ 
+        if (index <= 0) {
+            return this.prepend(value);
+        }
+        if (index >= this.length) {
             return this.append(value);
         }
-        
-
         const newNode = new Node(value);
         let prev = this.head;
-
         for (let i = 0; i < index - 1; i++) {
             prev = prev.next;
         }
-
-        
         newNode.next = prev.next;
         prev.next = newNode;
-        this.length++; 
+        this.length++;
     }
 
     remove(index) {
-        if (index < 0 || index >= this.length){
+        if (index < 0 || index >= this.length) {
             return null;
         }
-
         let removedNode;
-
         if (index === 0) {
-            removedNode = this.head;
             this.head = this.head.next;
         } else {
-            
             let prev = this.head;
             for (let i = 0; i < index - 1; i++) {
                 prev = prev.next;
             }
-            removedNode = prev.next;         
-            prev.next = removedNode.next;   
+            removedNode = prev.next;
+            prev.next = removedNode.next;
             if (index === this.length - 1) {
                 this.tail = prev;
             }
         }
-
-        this.length--; 
+        this.length--;
         return removedNode.value;
     }
-
 }
-
