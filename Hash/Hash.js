@@ -1,4 +1,4 @@
-class SimpleHashMap {
+export class SimpleHashMap {
     constructor() {
         this.map = {};
     }
