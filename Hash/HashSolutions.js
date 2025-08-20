@@ -31,7 +31,7 @@ class HashmapSolutions {
 
         //Return all grouped anagrams
         return Object.values(map);
-    }
+    } //Time Complexity: O(n * k log k), where n is number of words and k is max word length
 
     /**
      * Check Isomorphic Strings
@@ -67,7 +67,7 @@ class HashmapSolutions {
         }
 
         return true;
-    }
+    } //Time Complexity: O(n), where n is the length of the strings
 
     /**
      * First Non-Repeating Character
@@ -97,6 +97,6 @@ class HashmapSolutions {
 
         //If no non-repeating char exists
         return null;
-    }
+    } //Time Complexity: O(n), where n is the length of the string
 }
 

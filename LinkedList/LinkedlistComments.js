@@ -6,7 +6,7 @@ class Node {
         this.value = value;
         this.next = null; // Pointer to Next Node
     }
-}
+} //Time Complexity: O(1) - Node creation is constant time due to value assignments
 
 //Build a LinkedList
 class LinkedList {
@@ -15,7 +15,7 @@ class LinkedList {
         this.head = null; //Head of LinkedList
         this.tail = null; //Tail of LinkedList
         this.length = 0;  //Number of Nodes in Linkedlist
-    }
+    } //Time Complexity: O(1) - Initializing head, tail, and length is constant time
 
     //Method to find a node by its value in a linked list
     find(value) {
@@ -34,7 +34,7 @@ class LinkedList {
 
         //If the value is not found, return null
         return null;
-    }
+    } //Time Complexity: O(n) - Loop runs until value is found or end of list
 
 
     //Method to Add a Node After the Current Tail of LinkedList
@@ -55,7 +55,7 @@ class LinkedList {
         }
         //Increase the length by one
         this.length++;
-    }
+    } //Time Complexity: O(1) - Adding a node at the end is constant time due to direct access to tail
 
     //Method to add Node Before the Current Head of LinkedList
     prepend(value) {
@@ -76,7 +76,7 @@ class LinkedList {
         }
         //Increase the length by one
         this.length++;
-    }
+    } //
 
 
     //Mehtod to Add a Node at a Certain Place (Index) of the LinkedList
@@ -113,7 +113,7 @@ class LinkedList {
 
         //Increase the length by one
         this.length++;
-    }
+    } //Time Complexity: O(n) - Loop runs until index is reached, O(1) if index is 0 or length
 
     remove(index) {
 
@@ -155,7 +155,7 @@ class LinkedList {
 
         //Return the value of Removed Node Just in Case but is optional
         return removedNode.value;
-    }
+    } //Time Complexity: O(n) - Loop runs until index is reached, O(1) if index is 0 or length-1
 
 }
 
