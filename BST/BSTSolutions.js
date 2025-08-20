@@ -43,7 +43,7 @@ class BSTSolutions {
                 current = current.right; //Keep going right
             }
         }
-    }
+    } //Function runs in O(log n) on average, O(n) in worst case (unbalanced tree)
 
     /**
      * Method to Search a Value in a BST
@@ -79,7 +79,7 @@ class BSTSolutions {
 
         //If loop ends, value was not found in the BST
         return false;
-    }
+    } //Function runs in O(log n) on average, O(n) in worst case (unbalanced tree)
 
 
     /**
@@ -102,7 +102,7 @@ class BSTSolutions {
 
         //Return its value
         return current.value;
-    }
+    } //Function runs in O(n)
 
     /**
      * Method to Find the Maximum Value in a BST
@@ -124,5 +124,5 @@ class BSTSolutions {
 
         //Return its value
         return current.value;
-    }
+    } //Function runs in O(n)
 }
