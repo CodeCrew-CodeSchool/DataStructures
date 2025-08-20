@@ -7,6 +7,7 @@ class Node {
         this.next = null; //Pointer to Next Node
         this.prev = null; //Pointer to Previous Node
     }
+    //Time Complexity: O(1) - Node creation is constant time due to value assignments
 }
 
 //Build a Doubly LinkedList
@@ -17,6 +18,7 @@ class DoublyLinkedList {
         this.tail = null; //Tail of LinkedList
         this.length = 0;  //Number of Nodes in LinkedList
     }
+    //Time Complexity: O(1) - Initializing head, tail, and length is constant time
 
     //Method to Find a Node by Its Value
     find(value) {
@@ -24,7 +26,7 @@ class DoublyLinkedList {
         let current = this.head;
 
         //Traverse the List Until Value is Found
-        while (current) {
+        while (current) {    //O(n) - Loop runs until value is found or end of list
             if (current.value === value) {
                 return current;
             }
@@ -33,7 +35,9 @@ class DoublyLinkedList {
 
         //If Not Found Return Null
         return null;
-    }
+    } 
+    ///Time Complexity: O(n) - Loop runs until value is found or end of list 
+    // or O(1) if value is at head or tail
 
     //Method to Add a Node After the Current Tail of LinkedList
     append(value) {
@@ -56,6 +60,7 @@ class DoublyLinkedList {
         //Increase the length by one
         this.length++;
     }
+    //Time Complexity: O(1) - Adding a node at the end is constant time due to direct access to tail
 
     //Method to Add a Node Before the Current Head of LinkedList
     prepend(value) {
@@ -78,6 +83,7 @@ class DoublyLinkedList {
         //Increase the length by one
         this.length++;
     }
+    //Time Complexity: O(1) - Adding a node at the beginning is constant time due to direct access to head
 
     //Method to Insert a Node at a Certain Place (Index) of the LinkedList
     insert(index, value) {
@@ -119,6 +125,7 @@ class DoublyLinkedList {
         //Increase the length by one
         this.length++;
     }
+    //Time Complexity: O(n) - Loop runs until index is reached, O(1) if index is 0 or length
 
     //Method to Remove a Node at a Certain Index of the LinkedList
     remove(index) {
@@ -185,5 +192,6 @@ class DoublyLinkedList {
         //Return the Value of Removed Node
         return removedNode.value;
     }
+    //Time Complexity: O(n) - Loop runs until index is reached, O(1) if index is 0 or length-1
 
 }
